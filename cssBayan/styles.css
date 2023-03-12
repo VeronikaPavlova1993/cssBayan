@@ -1,1 +1,61 @@
+body {
+    background-color:rgb(104, 199, 178);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+
+.bayan_css {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitle_meme_1,
+.subtitle_meme_2,
+.subtitle_meme_3,
+.subtitle_meme_4,
+.subtitle_meme_5,
+.content_meme {
+    display: none;
+}
+
+.subtitle {
+    background-color:aquamarine;
+    color: #000;
+    margin-bottom: 20px;
+
+}
+.input_meme {
+    position: absolute;
+    appearance: none;
+}
+.subtitle_text {
+    padding: 15px, 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    color: #000;
+    -o-transition-timing-function: ease;
+}
+
+.subtitle_text:hover {
+    color: blueviolet;
+    }
+
+.subtitle_text::after {
+content: '+';
+}
+.content_meme {
+    background-color: aquamarine;
+    transition: all 10s ease;
+    margin: 0 auto;
+}
+.subtitle :hover ~ .content_meme {
+    display: block;
+    transition-delay: 5s;
+}
+
+.subtitle :hover + .subtitle_text::after {
+    content: '-';
+}
