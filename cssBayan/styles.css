@@ -19,7 +19,7 @@ body {
 .accordion_rs {
     box-sizing: border-box;
     margin-top: 0;
-}
+    }
 .title_bayan {
     box-sizing: border-box;
     border-bottom: #918b8bd6 0.2rem solid;
@@ -54,7 +54,7 @@ body {
     position: relative;
     cursor: pointer;
     color: #000;
-    -o-transition-timing-function:ease;
+    -o-transition-timing-function: ease-in;
 }
 
 .subtitle_text:hover {
@@ -65,25 +65,27 @@ body {
 .subtitle_text::after {
 content: '+';
 }
+
 .content_meme {
     background-color: rgb(252, 182, 234);;
     transition: 2s;
     text-align:center;
+    cursor: pointer;
+    transition: 2s;
 }
 .meme {
     max-width: 20rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     }
+    
 .subtitle :hover ~ .content_meme {
     display: block;
-    transition: all 2s ease 1s;
-}
+ }
 
 .subtitle :hover + .subtitle_text::after {
     content: '-';
 }
-input[type="checkbox"]:checked ~ .content_meme {
-    max-width: 2500px;
-    transition: 20s;
-}
+.subtitle :checked ~ .content_meme {
+     display: block;
+ }
